@@ -65,7 +65,7 @@ export default function DetailApp() {
                             <h2 className='text-base xl:text-xl text-efi_mildGreen bg-efi_lightGold px-4 xl:px-8 py-2 rounded-full'>Manajemen Pakan via Aplikasi eFeeder</h2>
                             <div className='h-[2px] w-[100px] bg-darkGray'></div>
                         </div>
-                        <div className='relative w-full pb-8 pt-4 space-y-2 overflow-'>
+                        <div className='relative w-full h-[200px] min-[460px]:h-[90px] sm:h-[200px] pb-8 pt-4 space-y-2 overflow-y-hidden'>
                             <div className='relative'>
                                 <div className='app-step app-step1 absolute space-x-4 text-left w-full flex justify-center lg:justify-start items-start'>
                                     <h1 className='text-3xl min-[470px]:text-5xl lg:text-7xl font-bold text-efi_gold'>01</h1>
@@ -81,13 +81,13 @@ export default function DetailApp() {
                                 </div>
                                 <div className='app-step app-step3 absolute space-x-4 text-left w-full flex justify-center lg:justify-start items-start opacity-1'>
                                     <h1 className='text-3xl min-[470px]:text-5xl lg:text-7xl font-bold text-efi_gold'>03</h1>
-                                    <p className='text-xl min-[470px]:text-lg sm:text-2xl xl:text-3xl w-full sm:w-auto font-semibold text-white leading-[1.2]'>
+                                    <p className='text-xl min-[470px]:text-lg md:text-2xl xl:text-3xl w-full sm:w-auto font-semibold text-white leading-[1.2]'>
                                         Pada tab Schedule, pilih metode <span className='font-extrabold text-darkGray bg-efi_gold'><b>Basic</b></span>, <span className='font-extrabold text-darkGray bg-efi_gold'><b>Advanced</b></span>, atau <span className='font-extrabold text-darkGray bg-efi_gold'><b>Continuos</b> </span>
                                     </p>
                                 </div>
                                 <div className='app-step app-step4 absolute space-x-4 text-left w-full flex justify-center lg:justify-start items-start opacity-1'>
                                     <h1 className='text-3xl min-[470px]:text-5xl lg:text-7xl font-bold text-efi_gold'>04</h1>
-                                    <p className='text-lg sm:text-2xl xl:text-3xl w-full sm:w-auto font-semibold text-white leading-[1.2]'>
+                                    <p className='text-lg md:text-2xl xl:text-3xl w-full sm:w-auto font-semibold text-white leading-[1.2]'>
                                         Masukkan jumlah pakan serta jadwal yang dibutuhkan lalu klik <span className='font-extrabold text-darkGray bg-efi_gold'><b>Simpan</b></span>
                                     </p>
                                 </div>
@@ -97,7 +97,7 @@ export default function DetailApp() {
                     </div>
                 </div>
                 {/* <div className='w-[300px] overflow-x-hidden overflow-y-visible'> */}
-                <div className='relative flex justify-center lg:justify-start items-center w-full pt-6 sm:pt-0 lg:w-[40%] xl:w-[50%] h-[70%] md:h-screen overflow-hidden'>
+                <div className='relative flex justify-center lg:justify-start items-center w-full pt-6 sm:pt-4 lg:pt-6 lg:w-[40%] xl:w-[50%] h-[70%] sm:h-[75%] md:h-screen overflow-hidden'>
                     <div className='app-img app-img1 absolute w-[280px] min-[470px]:w-[290px] sm:w-[300px] md:w-[330px] lg:w-[380px] xl:w-[450px] '>
                         <img className='lg:mt-8 scale-100' src={phone1} alt='eFishery'></img>
                     </div>
