@@ -14,25 +14,25 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Fish() {
     const fishRef = useRef(null);
 
-    // useLayoutEffect(() => {
-    //     const ikanList = gsap.utils.toArray(".ikan");
+    useLayoutEffect(() => {
+        const ikanList = gsap.utils.toArray(".ikan");
     
-    //     let ctx = gsap.context(() => {
-    //         gsap.timeline({
-    //             scrollTrigger:{
-    //                 trigger: fishRef.current,
-    //                 start: "top 400",
-    //                 end: "bottom",
-    //                 scrub: true,
-    //                 pinspacer:true,
-    //                 anticipatePin: 1   
-    //             }})
-    //         .to(ikanList, {translateX: -600, duration: 1}, 0) 
+        let ctx = gsap.context(() => {
+            gsap.timeline({
+                scrollTrigger:{
+                    trigger: fishRef.current,
+                    start: "top top",
+                    end: "bottom",
+                    scrub: true,
+                    pinspacer:true,
+                    anticipatePin: 1   
+                }})
+            .to(ikanList, {translateX: -600, duration: 1}, 0) 
             
-    //     });
+        });
         
-    //     return () => ctx.revert();
-    // },[])
+        return () => ctx.revert();
+    },[])
     return (
         <div ref={fishRef} className='relative flex flex-col justify-center items-center overflow-hidden bg-efi_darkGreen text-white py-6 xl:py-8' >
             <h1 className='text-base lg:text-2xl font-semibold '>eFeeder dapat digunakan untuk berbagai jenis ikan</h1>
