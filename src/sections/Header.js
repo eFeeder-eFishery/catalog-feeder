@@ -22,7 +22,7 @@ export default function Header() {
             gsap.timeline({
             scrollTrigger:{
                 start: "top top",
-                end: "25000",
+                end: "=+25000%",
                 onUpdate: (self) => {
                     self.direction === -1 ? showHeader.play() : showHeader.reverse()
                   }  

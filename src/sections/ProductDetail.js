@@ -19,7 +19,7 @@ export default function ProductDetail() {
             scrollTrigger:{
                 trigger: feederRef.current,
                 start: "top top",
-                end: "+=500%",
+                end: "+=2000%",
                 pin: feederRef.current,
                 pinspacer:true,
                 scrub: true,
@@ -31,49 +31,49 @@ export default function ProductDetail() {
             .to('#detail-2', {opacity: 1, ease:'none', duration: 3}, 4)
             .to('#line-3', {width: '100%', duration: 3}, 7)
             .to('#detail-3', {opacity: 1, ease:'none', duration: 3}, 7)
-            .to(['#line-1', '#line-2', '#line-3'], {width: '0%', duration: 3}, 12)
-            .to(['#detail-1', '#detail-2', '#detail-3'], {opacity: 0, ease:'none', duration: 3}, 12)
+            .to(['#line-1', '#line-2', '#line-3'], {width: '0%', duration: 3}, 17)
+            .to(['#detail-1', '#detail-2', '#detail-3'], {opacity: 0, ease:'none', duration: 3}, 17)
             .to(fishVideo, 
                 {
                 currentTime: 3,
-                duration: 5,
+                duration: 15,
                 ease: "none",
-              }, 15)
-            .to('#line-4', {width: '100%', duration: 3, delay: 1}, 20)
-            .to('#detail-4', {opacity: 1, ease:'none', duration: 3, delay: 1}, 20)
-            .to('#line-5', {width: '100%', duration: 3}, 23)
-            .to('#detail-5', {opacity: 1, ease:'none', duration: 3}, 23)
-            .to('#line-6', {width: '100%', duration: 3}, 26)
-            .to('#detail-6', {opacity: 1, ease:'none', duration: 3}, 26)
-            .to(['#line-4', '#line-5', '#line-6'], {width: '0%', duration: 3}, 31)
-            .to(['#detail-4', '#detail-5', '#detail-6'], {opacity: 0, ease:'none', duration: 3}, 31)
+              }, 20)
+            .to('#line-4', {width: '100%', duration: 3, delay: 1}, 35)
+            .to('#detail-4', {opacity: 1, ease:'none', duration: 3, delay: 1}, 35)
+            .to('#line-5', {width: '100%', duration: 3}, 38)
+            .to('#detail-5', {opacity: 1, ease:'none', duration: 3}, 38)
+            .to('#line-6', {width: '100%', duration: 3}, 41)
+            .to('#detail-6', {opacity: 1, ease:'none', duration: 3}, 41)
+            .to(['#line-4', '#line-5', '#line-6'], {width: '0%', duration: 3}, 51)
+            .to(['#detail-4', '#detail-5', '#detail-6'], {opacity: 0, ease:'none', duration: 3}, 51)
             .to(sections, {
                 xPercent: -100 * (sections.length - 1),
                 ease: "none",
-                duration: 5
-            }, 34)
-            .to('#line2-1', {width: '100%', duration: 3}, 40)
-            .to('#detail2-1', {opacity: 1, ease:'none', duration: 3}, 40)
-            .to('#line2-2', {width: '100%', duration: 3}, 43)
-            .to('#detail2-2', {opacity: 1, ease:'none', duration: 3}, 43)
-            .to('#line2-3', {width: '100%', duration: 3}, 46)
-            .to('#detail2-3', {opacity: 1, ease:'none', duration: 3}, 46)
-            .to(['#line2-1', '#line2-2', '#line2-3'], {width: '0%', duration: 3}, 51)
-            .to(['#detail2-1', '#detail2-2', '#detail2-3'], {opacity: 0, ease:'none', duration: 3}, 51)
+                duration: 15
+            }, 54)
+            .to('#line2-1', {width: '100%', duration: 3}, 70)
+            .to('#detail2-1', {opacity: 1, ease:'none', duration: 3}, 70)
+            .to('#line2-2', {width: '100%', duration: 3}, 73)
+            .to('#detail2-2', {opacity: 1, ease:'none', duration: 3}, 73)
+            .to('#line2-3', {width: '100%', duration: 3}, 76)
+            .to('#detail2-3', {opacity: 1, ease:'none', duration: 3}, 76)
+            .to(['#line2-1', '#line2-2', '#line2-3'], {width: '0%', duration: 3}, 85)
+            .to(['#detail2-1', '#detail2-2', '#detail2-3'], {opacity: 0, ease:'none', duration: 3}, 85)
             .to(shrimpVideo, 
                 {
                 currentTime: 3,
-                duration: 5,
+                duration: 15,
                 ease: "none",
-              }, 54)
-            .to('#line2-4', {width: '100%', duration: 3, delay: 1}, 60)
-            .to('#detail2-4', {opacity: 1, ease:'none', duration: 3, delay: 1}, 60)
-            .to('#line2-5', {width: '100%', duration: 3}, 63)
-            .to('#detail2-5', {opacity: 1, ease:'none', duration: 3}, 63)
-            .to('#line2-6', {width: '100%', duration: 3}, 66)
-            .to('#detail2-6', {opacity: 1, ease:'none', duration: 3}, 66)
-            .to(['#line2-4', '#line2-5', '#line2-6'], {width: '0%', duration: 3}, 71)
-            .to(['#detail2-4', '#detail2-5', '#detail2-6'], {opacity: 0, ease:'none', duration: 3}, 71)
+              }, 88)
+            .to('#line2-4', {width: '100%', duration: 3, delay: 1}, 105)
+            .to('#detail2-4', {opacity: 1, ease:'none', duration: 3, delay: 1}, 105)
+            .to('#line2-5', {width: '100%', duration: 3}, 108)
+            .to('#detail2-5', {opacity: 1, ease:'none', duration: 3}, 108)
+            .to('#line2-6', {width: '100%', duration: 3}, 111)
+            .to('#detail2-6', {opacity: 1, ease:'none', duration: 3}, 111)
+            .to(['#line2-4', '#line2-5', '#line2-6'], {width: '0%', duration: 3}, 121)
+            .to(['#detail2-4', '#detail2-5', '#detail2-6'], {opacity: 0, ease:'none', duration: 3}, 121)
             
         });
         
