@@ -23,7 +23,6 @@ export default function Fish() {
                     trigger: fishRef.current,
                     start: "top 400",
                     end: "bottom",
-                    markers: true,
                     scrub: true,
                     pinspacer:true,
                     anticipatePin: 1   

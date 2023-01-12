@@ -13,7 +13,6 @@ export default function DownloadApp() {
         scrollTrigger:{
             trigger: downloadRef.current,
             start: "center 300",
-            markers: true,
             scrub: true, 
             id:"donwload"
         }

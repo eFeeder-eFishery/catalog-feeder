@@ -22,7 +22,6 @@ export default function DetailApp() {
                   start: "top top",
                   end: "+="+height*2+"%",
                   // end: "+=200%",
-                  markers: true,
                   pin: appRef.current,
                   pinspacer:true,
                   scrub: true,

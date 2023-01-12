@@ -23,7 +23,6 @@ export default function Header() {
             scrollTrigger:{
                 start: "top top",
                 end: "25000",
-                markers: true,
                 onUpdate: (self) => {
                     self.direction === -1 ? showHeader.play() : showHeader.reverse()
                   }  

@@ -16,7 +16,6 @@ export default function Cobox() {
             trigger: coboxRef.current,
             start: "top top",
             end: "+="+heightCoboxList*1.3+"%",
-            markers: true,
             pin: coboxRef.current,
             pinspacer:true,
             scrub: true,
@@ -41,7 +40,6 @@ export default function Cobox() {
             trigger: coboxRef.current,
             start: "top bottom",
             end: "40 center",
-            markers: true,
             scrub: true,
             id: 'pin',   
         }

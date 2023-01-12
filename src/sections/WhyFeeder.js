@@ -19,7 +19,6 @@ export default function WhyFeeder() {
               trigger: whyRef.current,
               start: "top top",
               end: "+="+height*1.3+"%",
-              markers: true,
               pin: whyRef.current,
               pinspacer:true,
               scrub: true,
