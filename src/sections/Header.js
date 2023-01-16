@@ -43,8 +43,8 @@ export default function Header() {
                     }
                 </div>
             </div>
-            <nav className={toggle ? '-translate-y-[200%]' : ''}>
-                <ul className='flex-col flex lg:flex-row justify-center items-center text-efi_green lg:h-full w-full lg:w-auto pt-4 lg:pt-0 space-y-6 lg:space-y-0 lg:space-x-8 text-gray-600'>
+            <nav className={toggle ? '-translate-y-[200%] lg:translate-y-0' : ''}>
+                <ul className='flex-col flex lg:flex-row justify-center items-center text-efi_green lg:h-full w-full lg:w-auto pt-4 lg:pt-2 space-y-6 lg:space-y-0 lg:space-x-8 text-gray-600'>
                     <li className='hover:text-black'><a href='#'>Home</a></li>
                     <li className='hover:text-black'><a href='#aboutus'>About Us</a></li>
                     <li className='hover:text-black'><a href='#products'>Products</a></li>
