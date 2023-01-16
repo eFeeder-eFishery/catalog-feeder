@@ -53,18 +53,15 @@ export default function Cobox() {
 },[])
   return (
     <div ref={coboxRef} className='h-auto'>
-      <div className="absolute z-1 w-full">
-        <img className='object-fill w-full h-screen' src={bg2} alt='eFishery'></img>
-      </div>
-      <div className='bg-color absolute z-10 w-full h-screen bg-efi_mailGreen opacity-1'></div>
-      <div className='absolute z-20 flex flex-col justify-start items-center w-full h-screen overflow-hidden py-8'>
+      <div className='bg-color absolute z-10 w-screen h-screen bg-efi_mailGreen opacity-1'></div>
+      <div className='absolute z-20 flex flex-col justify-end items-center space-y-4 w-screen h-screen overflow-hidden pt-8'>
         <img className='cobox-img h-[200px] min-[470px]:h-[250px] xl:h-[320px] ml-4 xl:ml-8 scale-[9.7]' src={cobox} alt='eFishery'></img>
         <div className='flex flex-col justify-start items-start w-[90%] min-[470px]:w-[80%] lg:w-[70%] xl:w-[60%]'>
           <div className='space-x-0.5 xl:space-x-2 pb-2 flex justify-start items-center'>
             <div className='h-[1px] w-[50px] xl:w-[100px] bg-black'></div>
             <h2 className='text-sm xl:text-xl font-semibold text-black'>Control Box eFeeder 5</h2>
           </div>
-          <div className='relative coboxList xl:pb-8 xl:pt-4 w-[100%] xl:w-full'>
+          <div className='relative coboxList h-[364px] overflow-hidden xl:pb-8 xl:pt-4 w-[100%] xl:w-full'>
             <div className='cobox cobox1 absolute translate-y-[110%] xl:translate-y-[105%] flex justify-start items-start text-left space-x-2 xl:space-x-8 h-[250px] xl:h-[230px] bg-efi_mildGreen w-full rounded-lg py-4 xl:py-8 px-2 md:px-4 xl:px-8'>
               <h1 className='text-efi_gold text-3xl min-[470px]:text-4xl sm:text-5xl lg:text-7xl font-bold'>01</h1>
               <div className='flex flex-col justify-start'>
@@ -128,7 +125,6 @@ export default function Cobox() {
                 </p>
               </div>
             </div>
-            {/* <div className='cobox h-[230px]'></div> */}
           </div>
         </div>
       </div>

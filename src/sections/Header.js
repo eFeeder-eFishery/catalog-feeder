@@ -8,7 +8,7 @@ import { BiMenu } from 'react-icons/bi';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Header() {
-    const [toggle, showNav] = useState(false);
+    const [toggle, showNav] = useState(true);
 
     useLayoutEffect(() => {
         console.log(document.body.scrollHeight)
