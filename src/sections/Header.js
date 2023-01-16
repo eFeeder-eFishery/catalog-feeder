@@ -11,7 +11,6 @@ export default function Header() {
     const [toggle, showNav] = useState(true);
 
     useLayoutEffect(() => {
-        console.log(document.body.scrollHeight)
         let ctx = gsap.context(() => {
             let showHeader = gsap.from('header', { 
                 yPercent: -100,

@@ -12,7 +12,6 @@ export default function Homepage() {
     const homepageRef = useRef(null);
 
     useLayoutEffect(() => {
-        console.log(window.innerWidth)
         let ctx = gsap.context(() => {
             window.innerWidth < 1200 ? gsap.timeline() :
             gsap.timeline({

@@ -12,7 +12,6 @@ export default function WhyFeeder() {
   useLayoutEffect(() => {
     let whyList = gsap.utils.toArray(".why");
     let height = 100 * whyList.length;
-    console.log(window.innerWidth)
 
     let ctx = window.innerWidth < 768 ? gsap.context(() => {}) : gsap.context(() => {
         let tl = gsap.timeline({
