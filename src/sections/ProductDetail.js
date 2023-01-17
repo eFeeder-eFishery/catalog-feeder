@@ -92,7 +92,7 @@ export default function ProductDetail() {
             <div className='relative bg-primary rounded-3xl 
             h-[168px] min-[470px]:h-[258px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]
             w-[300px] min-[470px]:w-[460px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1120px]'>
-                {!fishVideo ? 
+                {fishVideo.readyState === 4 ? 
                 <video className='rounded-3xl' id="fish-video" preload="auto" muted="muted" playsInline={true} webkit-playsinline="true">
                     <source src={fishFeeder}/>
                 </video>
@@ -244,7 +244,7 @@ export default function ProductDetail() {
             </div>
             <div className='relative bg-primary rounded-3xl 
             w-[300px] min-[470px]:w-[460px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1120px]'>
-                {!shrimpVideo ? 
+                {shrimpVideo.readyState === 4 ? 
                 <video className='rounded-3xl' preload="auto" src={shrimpFeeder} id="shrimp-video" plays-inline=""></video>
                 :
                 <div className='w-full h-full flex flex-col items-center justify-center space-y-1'>
