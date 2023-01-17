@@ -13,7 +13,7 @@ import ProductDetail from './sections/ProductDetail';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-[100%] overflow-x-hidden">
       <Header/>
       <Homepage/>
       <WhyFeeder/>

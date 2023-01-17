@@ -89,7 +89,7 @@ export default function ProductDetail() {
             <div className='relative bg-transparent 
             w-[300px] min-[470px]:w-[460px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1120px]'>
                 <video className='rounded-3xl' src={fishFeeder} 
-                    type="video/mp4" id="fish-video" preload="auto" muted="" plays-inline=""></video>
+                    type="video/mp4" id="fish-video" preload="auto" muted="muted" playsInline={true} webkit-playsinline="true"></video>
 
                 {/* Detail Product Front */}
                 <div className='absolute pin-wrapper

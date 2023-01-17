@@ -52,7 +52,7 @@ export default function Cobox() {
     return () => ctx.revert();
 },[])
   return (
-    <div ref={coboxRef} className='h-auto'>
+    <div ref={coboxRef} className='h-auto w-[95%]'>
       <div className='bg-color absolute z-10 w-screen h-screen bg-efi_mailGreen opacity-1'></div>
       <div className='absolute z-20 flex flex-col justify-end items-center space-y-4 w-screen h-screen overflow-hidden pt-8'>
         <img className='cobox-img h-[200px] min-[470px]:h-[250px] xl:h-[320px] ml-4 xl:ml-8 scale-[9.7]' src={cobox} alt='eFishery'></img>
