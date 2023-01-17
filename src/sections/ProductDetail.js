@@ -88,7 +88,7 @@ export default function ProductDetail() {
             </div>
             <div className='relative bg-transparent 
             w-[300px] min-[470px]:w-[460px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1120px]'>
-                <video className='rounded-3xl'  id="fish-video" preload="auto" muted="muted" playsInline={true} webkit-playsinline="true">
+                <video className='rounded-3xl'  id="fish-video" loading="lazy" preload="false" muted="muted" playsInline={true} webkit-playsinline="true">
                     <source src={fishFeeder} type="video/mp4" />
                 </video>
 
@@ -224,7 +224,7 @@ export default function ProductDetail() {
             <div className='relative bg-transparent 
             w-[300px] min-[470px]:w-[460px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1120px]'>
                 <video className='rounded-3xl' src={shrimpFeeder} 
-                    type="video/mp4" id="shrimp-video" preload="auto" muted="" plays-inline=""></video>
+                    type="video/mp4" id="shrimp-video" preload="false" muted="" plays-inline=""></video>
 
                 {/* Detail Product Front */}
                 <div className='absolute pin-wrapper
