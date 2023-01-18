@@ -13,7 +13,27 @@ export default function WhyFeeder() {
     let whyList = gsap.utils.toArray(".why");
     let height = 100 * whyList.length;
 
-    let ctx = window.innerWidth < 768 ? gsap.context(() => {}) : gsap.context(() => {
+    let ctx = window.innerWidth < 768 ? 
+    gsap.context(() => {
+      let tl = gsap.timeline({
+        scrollTrigger:{
+            trigger: whyRef.current,
+            start: "top top",
+            end: "+="+height*1.3+"%",
+            pin: whyRef.current,
+            pinspacer:true,
+            scrub: true,
+            anticipatePin: 1    
+        }
+      })
+
+      whyList.forEach((elem, i) => {
+        if(i !== 0){
+          tl.from(elem, {autoAlpha:0, translateY: 100}, i)
+        }
+      })
+    }) 
+    : gsap.context(() => {
         let tl = gsap.timeline({
           scrollTrigger:{
               trigger: whyRef.current,

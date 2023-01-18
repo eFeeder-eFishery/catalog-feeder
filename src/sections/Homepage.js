@@ -52,7 +52,7 @@ export default function Homepage() {
                 </div>
                 <div id='section-2' className='relative min-[1200px]:absolute h-[500px] md:h-[350px] lg:h-[450px] min-[1200px]:h-full top-0 left-0 right-0 bottom-0 min-[1200px]:opacity-0'>
                     <div className='relative w-full overflow-hidden'>
-                        <div className='absolute z-10 h-[100%] h-[500px] md:h-[350px] lg:h-[450px] min-[1200px]:h-full w-full bg-efi_darkGreen opacity-90'></div>
+                        <div className='absolute z-10 h-[500px] md:h-[350px] lg:h-[450px] min-[1200px]:h-full w-full bg-efi_darkGreen opacity-90'></div>
                         <video preload="false" autoplay="autoplay" muted loop id='video' className='object-fill w-full h-screen scale-10 opacity-1'>
                             <source src={eFisheryVideo} type='video/mp4'></source>
                         </video>
