@@ -27,7 +27,7 @@ export default function Fish() {
                     pinspacer:true,
                     anticipatePin: 1   
                 }})
-            .to(ikanList, {translateX: -600, duration: 1}, 0) 
+            .to(ikanList, {translateY: -100, autoAlpha:0, duration: 1}, 0.2) 
             
         });
         
