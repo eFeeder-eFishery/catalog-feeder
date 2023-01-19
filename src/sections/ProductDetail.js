@@ -1,8 +1,11 @@
-import {React, useLayoutEffect, useRef} from 'react'
+import {React, useLayoutEffect, useRef, useState} from 'react'
 import gsap from 'gsap';
+import PulseLoader from "react-spinners/PulseLoader";
 
 
 export default function ProductDetail() {
+    const [isLoaded, setIsLoaded] = useState(false);
+
     const fishRef = useRef(null);
     const shrimpRef = useRef(null);
     const feederRef = useRef(null);
@@ -53,6 +56,8 @@ export default function ProductDetail() {
             frame: 0
         };
 
+        const tempIsLoad = false;
+
         for (let i = 0; i < frameCount; i++) {
             const img = new Image();
             img.src = shrimpCurrentFrame(i);
@@ -67,10 +72,14 @@ export default function ProductDetail() {
                 img.addEventListener('error', () => resolve(false));
             });
         })).then(results => {
-            if (results.every(res => res))
+            if (results.every(res => res)){
                 console.log('all images loaded successfully');
-            else
+                setIsLoaded(true);
+                tempIsLoad = true;
+            }else{
                 console.log('some images failed to load, all finished loading');
+
+            }
         });
 
         let ctx = gsap.context(() => {
@@ -164,6 +173,21 @@ export default function ProductDetail() {
             
         });
         
+        if(tempIsLoad){
+            ctx = gsap.context(() => {
+                gsap.timeline({
+                    scrollTrigger:{
+                        trigger: feederRef.current,
+                        start: "top top",
+                        end: "+=2000%",
+                        pin: feederRef.current,
+                        pinspacer:true,
+                        scrub: true,
+                        anticipatePin: 1    
+                    }})
+            })
+        }
+        
         return () => ctx.revert();
     },[])
   return (
@@ -173,15 +197,23 @@ export default function ProductDetail() {
             <div className='text-black font-bold text-xl mb-4'>
                 <div className='bg-efi_gold w-auto'>Bagian eFeeder untuk Ikan</div>
             </div>
-            <div className='relative bg-primary rounded-3xl h-auto flex justify-center 
-            w-[168px] min-[470px]:w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-auto'>
+            <div className={`relative ${isLoaded ? 'bg-primary' : 'bg-[#89A79E]'} rounded-3xl h-auto flex justify-center 
+            ${isLoaded ? 'w-[168px]' : 'w-[300px]'} min-[470px]:w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-auto`}>
                 {/* <video ref={videoFish} poster={fishFeederFront} className='rounded-3xl' id="fish-video" preload="auto" autoPlay autoplay loop muted playsinline playsInline webkit-playsinline="true">
                     <source src={fishFeeder3} type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>  */}
+                
                 <canvas ref={videoFish} id="fish-video" className='rounded-3xl
                 w-[1000px] xl:w-[auto]
                 h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></canvas>
+                {isLoaded ? <></> :
+                <div className='flex flex-col justify-center items-center
+                w-[1000px] xl:w-[1200px]
+                h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'>
+                    <PulseLoader color="#ffffff" />
+                    <p className='text-xs mt-2 ml-2 text-white'>Loading...</p>
+                </div>}
 
                 {/* Detail Product Front */}
                 <div className='absolute pin-wrapper

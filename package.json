@@ -12,6 +12,7 @@
     "react-ga4": "^1.4.1",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.8",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugins": "^1.0.8",
     "web-vitals": "^2.1.4"
