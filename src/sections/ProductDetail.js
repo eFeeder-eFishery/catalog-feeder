@@ -23,10 +23,10 @@ export default function ProductDetail() {
         videoFish.current.width = 1280;
         videoFish.current.height = 720;
 
-        const frameCount = 91;
+        const frameCount = 60;
         
         const fishCurrentFrame = index => ( 
-        `./images-feeder/fish-feeder2/fish-feeder (${(index + 1).toString()}).jpeg` 
+        `./images-feeder/fish-feeder3/fish-feeder (${(index + 1).toString()}).webp` 
         );
 
         const fishImages = []
@@ -48,7 +48,7 @@ export default function ProductDetail() {
         videoShrimp.current.height = 720;
         
         const shrimpCurrentFrame = index => ( 
-        `./images-feeder/shrimp-feeder/shrimp-feeder (${(index + 1).toString()}).png` 
+        `./images-feeder/shrimp-feeder3/shrimp-feeder (${(index + 1).toString()}).webp` 
         );
 
         const shrimpImages = []
@@ -205,12 +205,12 @@ export default function ProductDetail() {
                 </video>  */}
                 
                 <canvas ref={videoFish} id="fish-video" className={`rounded-3xl
-                ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-[1000px] xl:w-[auto]'}
-                ${isLoaded ? 'h-[450px]' : 'w-[1000px] xl:w-[auto]'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
-                {/* {isLoaded ? <></> :
-                <img src='./images-feeder/fish-feeder/fish-feeder (1).png' 
-                className='rounded-3xl w-[1000px] xl:w-[auto] h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></img>
-                // <div className='flex flex-col justify-center items-center
+                ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-0'}
+                ${isLoaded ? 'h-[450px]' : 'w-0'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
+                {isLoaded ? <></> :
+                <img src='./images-feeder/fish-feeder3/fish-feeder (61).png' 
+                className='rounded-3xl w-[1000px] xl:w-[auto] h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></img>}
+                {/* // <div className='flex flex-col justify-center items-center
                 // w-[1000px] xl:w-[1200px]
                 // h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'>
                 //     <PulseLoader color="#ffffff" />
