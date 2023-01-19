@@ -48,7 +48,7 @@ export default function ProductDetail() {
         videoShrimp.current.height = 720;
         
         const shrimpCurrentFrame = index => ( 
-        `./images-feeder/fish-feeder/fish-feeder (${(index + 1).toString()}).png` 
+        `./images-feeder/shrimp-feeder/shrimp-feeder (${(index + 1).toString()}).png` 
         );
 
         const shrimpImages = []
