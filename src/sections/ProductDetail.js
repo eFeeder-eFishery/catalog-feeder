@@ -204,9 +204,9 @@ export default function ProductDetail() {
                     Your browser does not support the video tag.
                 </video>  */}
                 
-                <canvas ref={videoFish} id="fish-video" className='rounded-3xl
-                w-[1000px] xl:w-[auto]
-                h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></canvas>
+                <canvas ref={videoFish} id="fish-video" className={`rounded-3xl
+                ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-0'}
+                ${isLoaded ? 'h-[450px]' : 'h-0'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
                 {isLoaded ? <></> :
                 <div className='flex flex-col justify-center items-center
                 w-[1000px] xl:w-[1200px]
