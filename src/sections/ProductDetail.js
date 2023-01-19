@@ -59,9 +59,19 @@ export default function ProductDetail() {
             shrimpImages.push(img);
         }  
 
-        if(shrimpImages[shrimpImages.length-1].naturalHeight !== 0){
-            console.log('isLoaded')
-        }
+        Promise.all(shrimpImages.map(img => {
+            if (img.complete)
+                return Promise.resolve(img.naturalHeight !== 0);
+            return new Promise(resolve => {
+                img.addEventListener('load', () => resolve(true));
+                img.addEventListener('error', () => resolve(false));
+            });
+        })).then(results => {
+            if (results.every(res => res))
+                console.log('all images loaded successfully');
+            else
+                console.log('some images failed to load, all finished loading');
+        });
 
         let ctx = gsap.context(() => {
             gsap.timeline({
@@ -144,9 +154,6 @@ export default function ProductDetail() {
             function fishRender() {
                 fishContext.clearRect(0, 0, videoFish.current.width, videoFish.current.height);
                 fishContext.drawImage(fishImages[fishFeeder.frame], 0, 0); 
-                setTimeout(function() {
-                    console.log('yey all the drawing is done (this is synchronous)');
-                  });
             } 
 
             function shrimpRender() {
