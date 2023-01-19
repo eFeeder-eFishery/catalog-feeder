@@ -197,19 +197,24 @@ export default function ProductDetail() {
             <div className='text-black font-bold text-xl mb-4'>
                 <div className='bg-efi_gold w-auto'>Bagian eFeeder untuk Ikan</div>
             </div>
-            <div className={`relative ${isLoaded ? 'bg-primary' : 'bg-[#89A79E]'} rounded-3xl h-auto flex justify-center 
-            ${isLoaded ? 'w-[168px]' : 'w-[300px]'} min-[470px]:w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-auto`}>
+            <div className='relative bg-primary rounded-3xl h-auto flex justify-center 
+            w-[168px] min-[470px]:w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-auto'>
+            {/* <div className={`relative ${isLoaded ? 'bg-primary' : 'bg-[#89A79E]'} rounded-3xl h-auto flex justify-center 
+            ${isLoaded ? 'w-[168px]' : 'w-[300px]'} min-[470px]:w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-auto`}> */}
                 {/* <video ref={videoFish} poster={fishFeederFront} className='rounded-3xl' id="fish-video" preload="auto" autoPlay autoplay loop muted playsinline playsInline webkit-playsinline="true">
                     <source src={fishFeeder3} type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>  */}
+                <canvas ref={videoFish} id="fish-video" className='rounded-3xl
+                w-[1000px] xl:w-[auto]
+                h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></canvas>
                 
-                <canvas ref={videoFish} id="fish-video" className={`rounded-3xl
+                {/* <canvas ref={videoFish} id="fish-video" className={`rounded-3xl
                 ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-0'}
                 ${isLoaded ? 'h-[450px]' : 'w-0'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
                 {isLoaded ? <></> :
                 <img src='./images-feeder/fish-feeder3/fish-feeder (61).png' 
-                className='rounded-3xl w-[1000px] xl:w-[auto] h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></img>}
+                className='rounded-3xl w-[1000px] xl:w-[auto] h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></img>} */}
                 {/* // <div className='flex flex-col justify-center items-center
                 // w-[1000px] xl:w-[1200px]
                 // h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'>
