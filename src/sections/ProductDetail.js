@@ -59,6 +59,10 @@ export default function ProductDetail() {
             shrimpImages.push(img);
         }  
 
+        if(shrimpImages[shrimpImages.length-1].naturalHeight !== 0){
+            console.log('isLoaded')
+        }
+
         let ctx = gsap.context(() => {
             gsap.timeline({
             scrollTrigger:{
