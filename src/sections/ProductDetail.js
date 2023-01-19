@@ -306,7 +306,7 @@ export default function ProductDetail() {
                     </div>
                 </div>
                 <div className='absolute pin-wrapper
-                top-[180px] sm:bottom-[230px] md:bottom-[280px] lg:bottom-[390px] xl:bottom-[430px]
+                bottom-[250px] sm:bottom-[230px] md:bottom-[280px] lg:bottom-[390px] xl:bottom-[430px]
                 -right-[60px] sm:right-[92px] md:right-[65px] lg:right-[120px] xl:right-[130px]'>
                     <div className='flex gap-1 top-0 left-0'>
                         <div className='flex flex-col justify-end items-end
@@ -401,10 +401,10 @@ export default function ProductDetail() {
                 </div>
                 <div className='absolute pin-wrapper
                 bottom-[50px] sm:bottom-[30px] md:bottom-[40px] lg:bottom-[70px]
-                -right-[30px] min-[470px]:right-[2px] sm:right-[92px] md:right-[65px] lg:right-[120px] xl:right-[180px]'>
+                -right-[30px] min-[470px]:right-[4px] sm:right-[92px] md:right-[65px] lg:right-[120px] xl:right-[180px]'>
                     <div className='flex gap-1 top-0 left-0'>
                         <div className='flex flex-col justify-end items-end
-                        w-32 min-[470px]:w-40 sm:w-52 md:w-72 lg:w-96'>
+                        w-28 min-[470px]:w-36 sm:w-52 md:w-72 lg:w-96'>
                             <div id='line2-3' className='h-[0.7px] mb-0 sm:mb-1 box-border bg-white w-[0%] self-end'></div>
                             <span id='detail2-3' className='flex flex-col justify-end items-center text-right text-white mt-1 opacity-0'>
                                 <h3 className='font-bold self-end
