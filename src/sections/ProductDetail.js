@@ -26,7 +26,7 @@ export default function ProductDetail() {
         const frameCount = 91;
         
         const fishCurrentFrame = index => ( 
-        `./images-feeder/fish-feeder/fish-feeder (${(index + 1).toString()}).png` 
+        `./images-feeder/fish-feeder2/fish-feeder (${(index + 1).toString()}).jpeg` 
         );
 
         const fishImages = []
@@ -64,7 +64,7 @@ export default function ProductDetail() {
             shrimpImages.push(img);
         }  
 
-        Promise.all(shrimpImages.map(img => {
+        Promise.all(fishImages.map(img => {
             if (img.complete)
                 return Promise.resolve(img.naturalHeight !== 0);
             return new Promise(resolve => {
