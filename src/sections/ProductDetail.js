@@ -140,6 +140,9 @@ export default function ProductDetail() {
             function fishRender() {
                 fishContext.clearRect(0, 0, videoFish.current.width, videoFish.current.height);
                 fishContext.drawImage(fishImages[fishFeeder.frame], 0, 0); 
+                setTimeout(function() {
+                    console.log('yey all the drawing is done (this is synchronous)');
+                  });
             } 
 
             function shrimpRender() {
