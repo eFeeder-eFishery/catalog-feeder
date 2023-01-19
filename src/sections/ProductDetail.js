@@ -34,6 +34,7 @@ export default function ProductDetail() {
         for (let i = 0; i < frameCount; i++) {
             const img = new Image();
             img.src = fishCurrentFrame(i);
+            img.loading = "lazy";
             fishImages.push(img);
         }  
 
