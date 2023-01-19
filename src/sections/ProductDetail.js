@@ -37,7 +37,6 @@ export default function ProductDetail() {
         for (let i = 0; i < frameCount; i++) {
             const img = new Image();
             img.src = fishCurrentFrame(i);
-            img.loading = "lazy";
             fishImages.push(img);
         }  
 
@@ -64,23 +63,23 @@ export default function ProductDetail() {
             shrimpImages.push(img);
         }  
 
-        Promise.all(fishImages.map(img => {
-            if (img.complete)
-                return Promise.resolve(img.naturalHeight !== 0);
-            return new Promise(resolve => {
-                img.addEventListener('load', () => resolve(true));
-                img.addEventListener('error', () => resolve(false));
-            });
-        })).then(results => {
-            if (results.every(res => res)){
-                console.log('all images loaded successfully');
-                setIsLoaded(true);
-                tempIsLoad = true;
-            }else{
-                console.log('some images failed to load, all finished loading');
+        // Promise.all(fishImages.map(img => {
+        //     if (img.complete)
+        //         return Promise.resolve(img.naturalHeight !== 0);
+        //     return new Promise(resolve => {
+        //         img.addEventListener('load', () => resolve(true));
+        //         img.addEventListener('error', () => resolve(false));
+        //     });
+        // })).then(results => {
+        //     if (results.every(res => res)){
+        //         console.log('all images loaded successfully');
+        //         setIsLoaded(true);
+        //         tempIsLoad = true;
+        //     }else{
+        //         console.log('some images failed to load, all finished loading');
 
-            }
-        });
+        //     }
+        // });
 
         let ctx = gsap.context(() => {
             gsap.timeline({
