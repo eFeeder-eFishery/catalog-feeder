@@ -205,9 +205,9 @@ export default function ProductDetail() {
                 </video>  */}
                 
                 <canvas ref={videoFish} id="fish-video" className={`rounded-3xl
-                ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-0'}
-                ${isLoaded ? 'h-[450px]' : 'h-0'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
-                {isLoaded ? <></> :
+                ${isLoaded ? 'w-[1000px] xl:w-[auto]' : 'w-[1000px] xl:w-[auto]'}
+                ${isLoaded ? 'h-[450px]' : 'w-[1000px] xl:w-[auto]'} sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]`}></canvas>
+                {/* {isLoaded ? <></> :
                 <img src='./images-feeder/fish-feeder/fish-feeder (1).png' 
                 className='rounded-3xl w-[1000px] xl:w-[auto] h-[450px] sm:h-[338px] md:h-[394px] lg:h-[562px] xl:h-[630px]'></img>
                 // <div className='flex flex-col justify-center items-center
@@ -216,7 +216,7 @@ export default function ProductDetail() {
                 //     <PulseLoader color="#ffffff" />
                 //     <p className='text-xs mt-2 ml-2 text-white'>Loading...</p>
                 // </div>
-                }
+                } */}
 
                 {/* Detail Product Front */}
                 <div className='absolute pin-wrapper
